@@ -1,0 +1,42 @@
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+
+    export EDITOR='/home/pox/.nvim/nvim.appimage'
+    alias see='bash ~/Rander/ChangeDisplaymouse.sh'
+    alias o='exa -la --icons'
+    alias vo='/usr/local/bin/nvim'
+    alias tm='tmux attach-session'
+    neofetch
+    alias ty='tty-cock -cs -C7'
+    alias g=git
+
+    export PATH='/home/erro/.yarn/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/pox/.cargo/bin'
+    alias kit='kitten icat'
+    alias em=/usr/bin/emacs
+    alias doo='/home/pox/.config/emacs/bin/doom'
+
+    export LESS_THERMCAP_mb='\e[1;32m'
+    export LESS_THERMCAP_md='\e[1;32m'
+    export LESS_THERMCAP_me='\e[0m'
+    export LESS_THERMCAP_se='\e[0m'
+    export LESS_THERMCAP_so='\e[1;32m'
+    export LESS_THERMCAP_ue='\e[0m'
+    export LESS_THERMCAP_us='\e[1;4;31m'
+
+    set VIRTUAL_ENV "/home/pox/Lab/personal/Universe/Vision-00/infra/clie/vision/bin/activate.fish"
+
+    # Created by `pipx` on 2024-01-19 08:33:08
+    set PATH $PATH /home/pox/local/bin
+    source ~/.asdf/asdf.fish
+    alias cairov="source /home/pox/cairo_venv/bin/activate.fish"
+    alias do="emacsclient -c -a 'emacs -nw'"
+    alias comssv="source /home/pox/Lab/work/PoxService/GamingReka/comss/bin/activate.fish"
+    alias hidos=/home/pox/Lab/personal/Games/Marv/Hidos/love2d.AppImage
+    alias mark=/home/pox/Lab/personal/Billion/test/marcher/client/marcher_v01/launch
+    export PATH='/usr/local/gleam/bin:/usr/local/gleam/bin:/home/pox/.asdf/shims:/home/pox/.asdf/bin:/home/erro/.yarn/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/pox/.cargo/bin:/home/pox/.local/bin'
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    export MANPATH="/home/linuxbrew/.linuxbrew/opt/erlang/lib/erlang/man:$MANPATH"
+    alias kit=kitten icat
+    export LIBRARY_PATH="$LIBRARY_PATH:/home/pox/mytensor"
+    export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/home/pox/mytensor"
+end
