@@ -1,4 +1,6 @@
-#! /usr/bin/fish
+echo "Main files for dotconf"
+
+echo "$(status filename)"
 
 # set color for check
 set green (set_color green)
