@@ -1,4 +1,4 @@
-#! /usr/bin/fish
+#! /run/current-system/sw/bin/fish
 
 set -gx POXCONF "
    ██████╗  ██████╗ ████████╗ ██████╗ ██████╗ ███╗   ██╗███████╗
