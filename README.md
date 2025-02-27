@@ -2,14 +2,18 @@
 
 POX .config
 
+> !! All .sh file for installation do not work !!
+> !! keep trying with fish until it's fixed !!
+
 ## install
 
 ```bash
- # if mac or linux, for windows need install wsl
- $ ./install.(sh or fish)
+ # if linux, for windows need install wsl
+ $ ./bin/install.(sh or fish)
 
- # if nixos
+ # if nixos or mac
  $ ./bin/nix-install.(sh or fish)
+ $ ./bin/mac-install.(sh or fish)
 ```
 
 ## Programme
