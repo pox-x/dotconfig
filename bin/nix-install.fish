@@ -1,5 +1,7 @@
 #! /run/current-system/sw/bin/fish
 
+echo "status $(status filename)"
+
 # link nixos title dotconf
 source $PWD/fonts/nix-dotconf.fish
 
