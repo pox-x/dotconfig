@@ -5,11 +5,11 @@ if status is-interactive
     # if linux uncomment and change with your fish path
     # type ($ whereis fish) for find path
     # uncomment this line if using nixos
-    export EDITOR='/run/current-system/sw/bin/nvim'
-    alias vo='/run/current-system/sw/bin/nvim'
+    # export EDITOR='/run/current-system/sw/bin/nvim'
+    # alias vo='/run/current-system/sw/bin/nvim'
     #
     # mac editor:
-    # export EDITOR='/usr/local/bin/fish'
+    export EDITOR='/usr/local/bin/fish'
 
     # verify if kitten exa nvim tmux fzf and tty-clock is installe in
     # your machine if not install it
@@ -17,7 +17,7 @@ if status is-interactive
     alias kit=kitten icat
     alias o='exa -la --icons'
 
-    # alias vo='/usr/local/bin/nvim'
+    alias vo='/usr/local/bin/nvim'
     alias tm='tmux attach-session'
     neofetch
     alias ty='tty-cock -cs -C7'
