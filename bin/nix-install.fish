@@ -4,4 +4,4 @@
 source $PWD/fonts/nix-dotconf.fish
 
 # running main fonction from install.fish files
-source $PWD/bin/install.fish
+source $PWD/bin/main.fish
