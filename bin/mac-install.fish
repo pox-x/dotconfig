@@ -4,4 +4,4 @@
 source $PWD/fonts/mac-dotconf.fish
 
 # link for install dotconf
-source $PWD/bin/install.fish
+source $PWD/bin/main.fish
