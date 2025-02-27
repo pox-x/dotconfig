@@ -24,7 +24,7 @@ if status is-interactive
     alias g=git
 
     # export for nixos
-    set -x PATH "/run/wrappers/bin:$HOME/.nix-profile/bin:/nix/profile/bin:$HOME/.local/state/nix/profile/bin:/etc/profiles/per-user/$USER/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:$HOME/.cargo/bin"
+    # set -x PATH "/run/wrappers/bin:$HOME/.nix-profile/bin:/nix/profile/bin:$HOME/.local/state/nix/profile/bin:/etc/profiles/per-user/$USER/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin:$HOME/.cargo/bin"
 
     # export PATH='$HOME/.yarn/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/pox/.cargo/bin'
     alias kit='kitten icat'
@@ -41,6 +41,7 @@ if status is-interactive
     # create a bin files that cant be used for personal prog
     # set -gx PATH $PATH:$HOME/bin
     set -gx PATH $PATH:$HOME/local/bin
+    set -x PATH "$PATH:$HOME/bin"
 
     # source ~/.asdf/asdf.fish
 
@@ -57,19 +58,19 @@ if status is-interactive
     # special for nixos 
     # uncomment for path nixos
 
-    export PATH="$PATH:$HOME/bin"
-    eval "$(zoxide init fish)"
+
+    # eval "$(zoxide init fish)"
     # uncomment for install any-nix-shell
     # nix-env -iA nixpkgs.any-nix-shell
-    any-nix-shell fish --info-right | source
+    # any-nix-shell fish --info-right | source
 
     # set agent-ssh launch at each fish 
-    set -Ux SSH_AUTH_SOCK (ssh-agent -c | grep -oE '/tmp/ssh-[^;]+' | head -n1)
+    # set -Ux SSH_AUTH_SOCK (ssh-agent -c | grep -oE '/tmp/ssh-[^;]+' | head -n1)
 
 end
 # bun.js
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
+# set --export BUN_INSTALL "$HOME/.bun"
+# set --export PATH $BUN_INSTALL/bin $PATH
 
 # Added by LM Studio CLI (lms)
-set -gx PATH $PATH $HOME/.lmstudio/bin
+# set -gx PATH $PATH $HOME/.lmstudio/bin
