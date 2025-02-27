@@ -34,13 +34,7 @@ end
 # begin/end output log visualisation
 function launchEnd
     set endlog "[$user] [$argv[1] $argv[2] $zero]"
-    if string match -q $argv[2] end
-        printf "|> %s <|\n" $endlog | tee -a $log_file
-    else if string match -q $argv[2] begin
-        printf "<| %s |>\n" $endlog | tee -a $log_file
-    else
-        printf "<| -------------------------- \n  |>\n" | tee -a $log_file
-    end
+    printf "|> %s <|\n" $endlog | tee -a $log_file
 end
 
 
@@ -94,7 +88,7 @@ end
 
 # check diff dotconf to $home/.config
 function diffConf
-    launchEnd $yellow begin
+    echo "$brown $POXCONF $zero"
 
     printf "%s %s " $osname $versionname
     set gloop true
@@ -119,7 +113,7 @@ $red q$zero -> exit
                 logs "$i\n"
             end
         else if test $mados = q
-            logs exit
+            launchEnd $red "end exit"
             set gloop false
         else
             logs "$red Error$zero: bad input !!!!!"
@@ -128,7 +122,8 @@ $red q$zero -> exit
 end
 
 
+
 diffConf
-launchEnd $red end
+
 # suppres all variable
 set -e prog osname green zero installeur home conf user diffConf saved mados gloop day time user logtime logs files oss listprog launchEnd
