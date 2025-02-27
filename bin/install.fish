@@ -1,4 +1,4 @@
-#! /run/current-system/sw/bin/fish
+#! /usr/bin/fish
 
 source $HOME/**/fonts/dotconf.fish
 
