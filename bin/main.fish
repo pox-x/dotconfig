@@ -1,6 +1,3 @@
-echo "Main files for dotconf"
-
-echo "$(status filename)"
 
 # set color for check
 set green (set_color green)
@@ -97,7 +94,8 @@ end
 
 # check diff dotconf to $home/.config
 function diffConf
-    echo "$brown $POXCONF $zero"
+    launchEnd $yellow begin
+
     printf "%s %s " $osname $versionname
     set gloop true
     while test $gloop = true
@@ -130,10 +128,7 @@ $red q$zero -> exit
 end
 
 
-
-launchEnd $yellow begin
 diffConf
 launchEnd $red end
-
 # suppres all variable
 set -e prog osname green zero installeur home conf user diffConf saved mados gloop day time user logtime logs files oss listprog launchEnd
