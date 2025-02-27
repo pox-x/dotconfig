@@ -5,8 +5,8 @@ POX .config
 ## install
 
 ```bash
- # if fish
- $ ./install.(sh or fish) \"mac or linux\"
+ # if mac or linux, for windows need install wsl
+ $ ./install.(sh or fish)
 
  # if nixos
  $ ./bin/nix-install.(sh or fish)
