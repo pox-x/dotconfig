@@ -22,3 +22,12 @@ POX .config
   - [x] ghostty
   - [x] nvim
   - [x] tmux
+
+## Probleme
+
+* If fish error themes try to link,
+
+```bash
+  # if harleen 
+  $ ln -s $HOME/.local/share/omf/themes/harleen/fish_prompt.fish /fish/functions
+```
