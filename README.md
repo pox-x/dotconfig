@@ -12,7 +12,7 @@ POX .config
  $ ./dotconf.(sh or fish)
 
  # if you want to create command
- mkdir $HOME/bin
+ mkdir $HOME/bin # for linux distrib $USER fro mac
  ln -s $PWD/dotconf.fish $HOME/bin/dotconf
 ```
 
