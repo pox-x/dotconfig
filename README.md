@@ -9,11 +9,11 @@ POX .config
 
 ```bash
  # if linux, for windows need install wsl
- $ ./bin/install.(sh or fish)
+ $ ./dotconf.(sh or fish)
 
- # if nixos or mac
- $ ./bin/nix-install.(sh or fish)
- $ ./bin/mac-install.(sh or fish)
+ # if you want to create command
+ mkdir $PWD/bin
+ ln -s $PWD/dotconf.fish $PWD/bin/dotconf
 ```
 
 ## Programme
@@ -23,10 +23,9 @@ POX .config
   - [x] nvim
   - [x] tmux
 
-## Probleme
+## Bugs
 
 * If fish error themes try to link,
-
 ```bash
   # if harleen 
   $ ln -s $HOME/.local/share/omf/themes/harleen/fish_prompt.fish /fish/functions
