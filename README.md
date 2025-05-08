@@ -12,8 +12,8 @@ POX .config
  $ ./dotconf.(sh or fish)
 
  # if you want to create command
- mkdir $PWD/bin
- ln -s $PWD/dotconf.fish $PWD/bin/dotconf
+ mkdir $HOME/bin
+ ln -s $PWD/dotconf.fish $HOME/bin/dotconf
 ```
 
 ## Programme
