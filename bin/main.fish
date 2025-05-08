@@ -21,7 +21,7 @@ set time "$cyan $(date '+%T') $zero"
 set home "$yellow $HOME$zero"
 set pwd "$yellow $PWD $zero"
 set user "$green $USER $zero"
-set logtime "[$day][$time][$pwd][$user]"
+set logtime "[$day][$time][$user]"
 
 set base $HOME/.config
 set conf $home/.config
@@ -29,7 +29,11 @@ set log_file "dotconf.log"
 
 # 📝 Fonction de log
 function logs
-    printf "$logtime |> %s\n" $argv | tee -a $log_file
+    if test argv[1]
+        printf "$logtime |> %s\n" $argv | tee -a $log_file
+    else
+        printf "$logtime |> %s\n" $argv | tee -a $log_file
+    end
 end
 
 # begin/end output log visualisation
@@ -149,9 +153,9 @@ $red q$zero -> exit
             saved $mados
         else if test $mados = f
             for i in $prog
-                set difs $(diff -r $HOME/.config/$i ./$i)
-                for i in $difs
-                    logs "$i\n"
+                set difs $(diff -r $HOME/.config/$i $HOME/.config/dotconfig/$i)
+                for a in $difs
+                    logs "$a" $i
                 end
             end
         else if test $mados = q
