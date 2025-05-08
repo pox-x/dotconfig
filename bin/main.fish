@@ -63,15 +63,15 @@ end
 function downloader
     set files $argv[2]
     # diff $PWD/$files $HOME/.config/$files
-    rsync -r $base/$files $PWD/
-    logs "$green ok$zero <| downloader in $PWD/$files"
+    rsync -r $HOME/.config/$files $HOME/.config/dotconfig
+    logs "$green ok$zero <| downloader in $HOME/.config/dotconfig/$files"
 end
 
 # Saved func
 function saved
     for i in $prog
         if test $argv[1] = y
-            if test -d $i
+            if test -d $HOME/.config/dotconfig$i
                 if test $osname = Linux -o Darwin
                     installeur $osname "$i"
                 else
@@ -82,7 +82,7 @@ function saved
             end
         else if test $argv[1] = d
             echo "downloader started"
-            if test -d $i
+            if test -d $HOME/.config/$i
                 if test $osname = Linux -o Darwin
                     downloader $osname "$i"
                 else
@@ -92,7 +92,7 @@ function saved
                 logs "$red Error$zero: bad input files not found; $i"
             end
         else if test $argv[1] = c
-            if test -d $i
+            if test -d $HOME/.config/dotconfig$i
                 if test $osname = Linux -o Darwin
                     installeur $osname "$i"
                 else
