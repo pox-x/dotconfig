@@ -9,10 +9,11 @@ POX .config
 
 ```bash
  # if linux, for windows need install wsl
- $ ./dotconf.(sh or fish)
+ ./dotconf.(sh or fish)
 
  # if you want to create command
- mkdir $HOME/bin # for linux distrib $USER fro mac
+ # $HOME linux distrib $USER for MAC
+ mkdir $HOME/bin
  ln -s $PWD/dotconf.fish $HOME/bin/dotconf
 ```
 
