@@ -64,6 +64,10 @@ if status is-interactive
 
     export PATH="$PATH:$HOME/bin"
     eval "$(zoxide init fish)"
+
+    # launch ssh at each fish 
+    if not pgrep ssh-agent >/dev/null
+    end
     # uncomment for install any-nix-shell
     # nix-env -iA nixpkgs.any-nix-shell
     any-nix-shell fish --info-right | source
