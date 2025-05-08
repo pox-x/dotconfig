@@ -13,9 +13,9 @@ end
 
 # running
 if test $versionname = NixOS
-    source $PWD/bin/nix-install.fish
+    source $HOME/.config/dotconfig/bin/nix-install.fish
 else
-    source $PWD/bin/install.sh
+    source $PWD/.config/dotconfig/bin/install.sh
 end
 
 set -e osname one versionname
