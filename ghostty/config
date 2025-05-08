@@ -55,21 +55,24 @@
 # ==================
 # theme = Ciapre
 # theme = Apple System Colors
-theme = GitHub Dark
-# theme = catppuccin-mocha
+# theme = GitHub Dark
+theme = catppuccin-mocha
 mouse-hide-while-typing = true
-mouse-scroll-multiplier = 1.5
+mouse-scroll-multiplier = 1
 
 # file this is the new nerd font
-# font-family = "Hurmit Nerd Font Mono"
+font-family = "Hurmit Nerd Font Mono"
 # font-family = "Space Mono"
 # font-family = "SF Mono"
 # font-family-bold = "MonaspiceRn NFM"
-font-family = "MonaspiceRn NFM"
+# font-family = "MonaspiceRn NFM"
+# font-family = "Monorfur Nerd Font"
+# font-family = "Mononoki Nerd Font Mono"
 # font-family = "iosevkaTermSlab NFP"
 # font-family = "HeavyData Nerd Font"
 # font-family = "Hasklug Nerd Font"
 # font-family = "FantasqueSansM Nerd Font"
+# font-family = "CaskaydiaCove NF"
 # font-family = "CaskaydiaMono NF"
 # font-family = "ArgueDemo"
 # font-family = "JetBrains Mono"
@@ -79,18 +82,20 @@ font-family = "MonaspiceRn NFM"
 # font-family = "Aurebesh condensed"
 
 
-# font-size = 8
-# font-size = 9.5
-font-size = 9
+font-size = 8.2
+# font-size = 10
+# font-size = 9
 font-style-italic = false
 font-thicken = true
 font-thicken-strength = 0
 
 alpha-blending = linear
 
-adjust-cell-width = 0
-adjust-cell-height = -2
+adjust-cell-width = -0
+adjust-cell-height = 0
 adjust-cursor-height = -2
+# adjust-cell-height = -1
+# adjust-cell-height = -5
 
 # minimum-contrast = 3
 
@@ -101,11 +106,20 @@ window-decoration = none
 # window-theme = ghostty
 confirm-close-surface = false
 
+# background=383b3f
+# background=1A1b22
+# background=808283
+# background=b8b6b4
 background=000000
-# background=050d14
+# background=0c0a29
+# background=0c0a19
+# background=0c0721
+# background=030110
+# background=050d1b
+# background=d3ff52
 # background=03f493
 # background=0d0b09
-# background=090905
+# background=050505
 # background=10101d
 # background=0c1021
 # background=161515
@@ -141,10 +155,20 @@ background=000000
 # background=18191C
 
 background-blur = true
-background-opacity = 0.50
+# background-opacity = 0.20
+# background-opacity = 0.42
+# background-opacity = 0.52
+# background-opacity = 0.62
+# background-opacity = 0.65
+# background-opacity = 0.72
+# background-opacity = 0.82
+background-opacity = 0.92
+# background-opacity = 0.98
+# background-opacity = 1.0
 
 cursor-color = ff0000
 cursor-style = underline
+cursor-style-blink = true
 
 link-url = true
 
@@ -153,3 +177,4 @@ shell-integration = fish
 
 keybind = ctrl+f4=quit
 keybind = f5=reload_config
+

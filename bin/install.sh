@@ -2,7 +2,7 @@
 
 set -e
 
-prog="fish  ghostty kitty nvim tmux"
+prog="fish ghostty kitty nvim tmux"
 FILE=/etc/os-release
 
 if [ ! -f $FILE ]; then

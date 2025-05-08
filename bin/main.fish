@@ -55,17 +55,48 @@ function installeur
     logs "$green ok$zero <| saved in $conf/$files"
 end
 
+function downloader
+    set files $argv[2]
+    # diff $PWD/$files $HOME/.config/$files
+    rsync -r $HOME/.config/$files $PWD/
+    logs "$green ok$zero <| downloader in $PWD/$files"
+end
+
 # Saved func
 function saved
     for i in $prog
-        if test -d $i
-            if test $osname = Linux -o Darwin
-                installeur $osname "$i"
+        if test $argv[1] = y
+            if test -d $i
+                if test $osname = Linux -o Darwin
+                    installeur $osname "$i"
+                else
+                    logs "$red Error$zero: bad save probleme with $status"
+                end
             else
-                logs "$red Error$zero: bad save probleme with $status"
+                logs "$red Error$zero: bad input files not found; $i"
             end
-        else
-            logs "$red Error$zero: bad input files not found; $i"
+        else if test $argv[1] = d
+            echo "downloader started"
+            if test -d $i
+                if test $osname = Linux -o Darwin
+                    downloader $osname "$i"
+                else
+                    logs "$red Error$zero: bad download probleme with $status"
+                end
+            else
+                logs "$red Error$zero: bad input files not found; $i"
+            end
+        else if test $argv[1] = c
+            if test -d $i
+                if test $osname = Linux -o Darwin
+                    installeur $osname "$i"
+                else
+                    logs "$red Error$zero: bad check probleme with $status"
+                end
+            else
+                logs "$red Error$zero: bad input files not found; $i"
+            end
+
         end
     end
 end
@@ -94,23 +125,33 @@ function diffConf
     set gloop true
     while test $gloop = true
         echo "
-$yellow y$zero -> yes
-$blue c$zero -> choice
-$magenta d$zero -> check diff
+$yellow y$zero -> install prog
+$blue c$zero -> choice prog
+$brown d$zero -> download prog
+$cyan p$zero -> preview prog
+$magenta f$zero -> check diff
 $red q$zero -> exit
         "
+        set prog fish ghostty kitty nvim tmux
         read -S mados
         if test $mados = y
-            set prog fish ghostty kitty nvim tmux
-            saved
+            echo "list of prog: $prog"
+            saved $mados
+        else if test $mados = d
+            echo "check prog $prog"
+            saved $mados
+        else if test $mados = p
+            echo "list of prog: $prog"
         else if test $mados = c
             pathListSaved
             echo " "
-            saved
-        else if test $mados = d
-            set difs $(diff -r $HOME/.config ./)
-            for i in $difs
-                logs "$i\n"
+            saved $mados
+        else if test $mados = f
+            for i in $prog
+                set difs $(diff -r $HOME/.config/$i ./$i)
+                for i in $difs
+                    logs "$i\n"
+                end
             end
         else if test $mados = q
             launchEnd $red "end exit"
