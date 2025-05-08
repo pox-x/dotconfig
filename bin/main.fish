@@ -23,6 +23,7 @@ set pwd "$yellow $PWD $zero"
 set user "$green $USER $zero"
 set logtime "[$day][$time][$pwd][$user]"
 
+set base $HOME/.config
 set conf $home/.config
 set log_file "dotconf.log"
 
@@ -51,14 +52,14 @@ end
 function installeur
     set files $argv[2]
     # check destination
-    cp -r $files $HOME/.config
+    cp -r $files $base
     logs "$green ok$zero <| saved in $conf/$files"
 end
 
 function downloader
     set files $argv[2]
     # diff $PWD/$files $HOME/.config/$files
-    rsync -r $HOME/.config/$files $PWD/
+    rsync -r $base/$files $PWD/
     logs "$green ok$zero <| downloader in $PWD/$files"
 end
 
@@ -167,4 +168,4 @@ end
 diffConf
 
 # suppres all variable
-set -e prog osname green zero installeur home conf user diffConf saved mados gloop day time user logtime logs files oss listprog launchEnd
+set -e prog osname green zero installeur home base conf user diffConf saved mados gloop day time user logtime logs files oss listprog launchEnd

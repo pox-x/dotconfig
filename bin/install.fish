@@ -2,7 +2,8 @@
 
 echo "status $(status filename)"
 
-source $PWD/fonts/dotconf.fish
+echo loaded
+source $HOME/.config/dotconfig/fonts/dotconf.fish
 
 # running main fonction from install.fish files
-source $PWD/bin/main.fish
+source $HOME/.config/dotconfig/bin/main.fish
